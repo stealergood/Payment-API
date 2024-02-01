@@ -1,11 +1,4 @@
 import db from "../config/dbconfig.js";
-import Midtrans from "midtrans-client";
-
-let snap = new Midtrans.Snap({
-    isProduction: false,
-    serverKey: `${process.env.SERVER_KEY}`,
-    clientKey: `${process.env.CLIENT_KEY}`
-});
 
 export const Payment = async (req, res) => {
     const { serviceid, order_id, name, price, qty } = await req.body;
